@@ -1,0 +1,28 @@
+package de.hx.bokumsatzkontroller;
+
+public class FleischModel {
+
+	String artikelname, einheit;
+	double einheitProBestellung, schwund, verkaufsfaktor, bruttoPreis,
+			nettoPreis, einkaufspreis;
+	double nettoUmsatzProKarton, bruttoUmsatzProKarton, nettoUmsatzProEinheit,
+			wareneinsatz;
+
+	public FleischModel(String artikelname, String einheit,
+			double einheitProBestellung, double schwund, double verkaufsfaktor,
+			double bruttoPreis, double nettoPreis, double einkaufspreis) {
+		this.artikelname = artikelname;
+		this.einheit = einheit;
+		this.einheitProBestellung = einheitProBestellung;
+		this.schwund = schwund;
+		this.verkaufsfaktor = verkaufsfaktor;
+		this.bruttoPreis = bruttoPreis;
+		this.nettoPreis = nettoPreis;
+		this.einkaufspreis = einkaufspreis;
+		
+		this.nettoUmsatzProKarton = (this.einheitProBestellung - this.einheitProBestellung * this.schwund) * this.verkaufsfaktor * this.nettoPreis;
+		this.bruttoUmsatzProKarton = this.nettoUmsatzProEinheit * 0.12;
+		this.nettoUmsatzProEinheit = this.nettoUmsatzProKarton / this.einheitProBestellung;
+	}
+
+}

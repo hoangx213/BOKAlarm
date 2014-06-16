@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete element from project &apos;HungService&apos;&#x0D;&#x0A;- Original project: &apos;HungService&apos;&#x0D;&#x0A;- Original element: &apos;de.hx.hungservice.OpenBrowser.java&apos;" description="Delete element" element1="/src&lt;de.hx.hungservice{OpenBrowser.java" elements="1" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1390211932706" subPackages="false" version="1.0"/>
+</session>

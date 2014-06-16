@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="android.R"/>
+<fullyQualifiedTypeName name="com.example.android.scheduler.R"/>
+<fullyQualifiedTypeName name="android.support.v4.content.WakefulBroadcastReceiver"/>
+<fullyQualifiedTypeName name="android.app.Activity"/>
+<fullyQualifiedTypeName name="de.hx.examplealarm.MainActivity"/>
+<fullyQualifiedTypeName name="de.hx.bokalarm.R.layout"/>
+<fullyQualifiedTypeName name="de.hx.bokalarm.MainActivity"/>
+<fullyQualifiedTypeName name="de.hx.bokalarm.WakeLocker"/>
+<fullyQualifiedTypeName name="android.widget.Button"/>
+<fullyQualifiedTypeName name="android.app.AlarmManager"/>
+<fullyQualifiedTypeName name="de.hx.bokalarm.MeldungActivity"/>
+<fullyQualifiedTypeName name="de.hx.bokalarm.BOKAlarmReceiver"/>
+<fullyQualifiedTypeName name="de.hx.bokalarm.BOKAlarmService"/>
+<fullyQualifiedTypeName name="android.view.View.OnClickListener"/>
+<fullyQualifiedTypeName name="android.content.Intent"/>
+<fullyQualifiedTypeName name="android.net.Uri"/>
+<fullyQualifiedTypeName name="android.content.BroadcastReceiver"/>
+<fullyQualifiedTypeName name="android.sax.StartElementListener"/>
+<fullyQualifiedTypeName name="de.hx.hungservice.OpenBrowser"/>
+<fullyQualifiedTypeName name="io.socket.SocketIO"/>
+<fullyQualifiedTypeName name="io.socket.IOCallback"/>
+<fullyQualifiedTypeName name="android.widget.Toast"/>
+<fullyQualifiedTypeName name="com.example.chatapp.MainActivity"/>
+<fullyQualifiedTypeName name="de.hx.bokumsatzkontroller.R.xml"/>
+<fullyQualifiedTypeName name="org.xmlpull.v1.XmlPullParser"/>
+<fullyQualifiedTypeName name="de.hx.bokumsatzkontroller.FleischModel"/>
+<fullyQualifiedTypeName name="de.hx.bokumsatzkontroller.FleischXmlParser"/>
+<fullyQualifiedTypeName name="android.text.InputType"/>
+<fullyQualifiedTypeName name="android.widget.LinearLayout.LayoutParams"/>
+<fullyQualifiedTypeName name="de.hx.bokumsatzkontroller.R.color"/>
+<fullyQualifiedTypeName name="android.widget.TableLayout.LayoutParams"/>
+<fullyQualifiedTypeName name="android.text.TextWatcher"/>
+<fullyQualifiedTypeName name="de.hx.bokumsatzkontroller.MainActivity.MyTextWatcher"/>
+<fullyQualifiedTypeName name="android.widget.TableLayout"/>
+<fullyQualifiedTypeName name="android.widget.TableRow"/>
+</qualifiedTypeNameHistroy>

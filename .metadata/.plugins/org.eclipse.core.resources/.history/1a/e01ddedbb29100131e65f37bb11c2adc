@@ -1,0 +1,90 @@
+package de.hx.bokumsatzkontroller;
+
+import java.io.IOException;
+import java.io.StringReader;
+import java.util.ArrayList;
+
+import org.xmlpull.v1.XmlPullParser;
+import org.xmlpull.v1.XmlPullParserException;
+import org.xmlpull.v1.XmlPullParserFactory;
+import de.hx.bokumsatzkontroller.R.xml;
+
+import android.content.Context;
+
+public class FleischXmlParser {
+
+	Context context;
+	
+	public ArrayList<FleischModel> fleischParsen()
+			throws XmlPullParserException, IOException {
+		
+		ArrayList<FleischModel> result = new ArrayList<FleischModel>();
+		XmlPullParser xpp = context.getResources().getXml(R.xml.fleisch);
+
+		xpp.setInput(new StringReader("<foo>Hello World!</foo>"));
+		xpp.next();
+		int eventType = xpp.getEventType();
+		while (eventType != XmlPullParser.END_DOCUMENT) {
+			eventType = xpp.next();
+			
+			if("fleisch" == xpp.getName() && eventType == XmlPullParser.START_TAG){
+				eventType = xpp.next();
+				while("fleisch" != xpp.getName()){
+					if("item" == xpp.getName()){
+						FleischModel  fleischModel;
+						String artikelName, einheit;
+						double einheitProBestellung, schwund, verkaufsfaktor, bruttoPreis,
+								nettoPreis, einkaufspreis; 
+						eventType = xpp.next();
+						while("item" != xpp.getName()){
+							if("artikelName" == xpp.getName() && eventType == XmlPullParser.START_TAG){
+								eventType = xpp.next();
+								artikelName = xpp.getText();
+							} else if("einheit" == xpp.getName() && eventType == XmlPullParser.START_TAG){
+								eventType = xpp.next();
+								einheit = xpp.getText();
+							} else if("einheitProBestellung" == xpp.getName() && eventType == XmlPullParser.START_TAG){
+								eventType = xpp.next();
+								einheitProBestellung = Double.valueOf(xpp.getText());
+							} else if("schwund" == xpp.getName() && eventType == XmlPullParser.START_TAG){
+								eventType = xpp.next();
+								schwund = Double.valueOf(xpp.getText());
+							}else if("verkaufsfaktor" == xpp.getName() && eventType == XmlPullParser.START_TAG){
+								eventType = xpp.next();
+								verkaufsfaktor = Double.valueOf(xpp.getText());
+							}else if("bruttoPreis" == xpp.getName() && eventType == XmlPullParser.START_TAG){
+								eventType = xpp.next();
+								bruttoPreis = Double.valueOf(xpp.getText());
+							}else if("nettoPreis" == xpp.getName() && eventType == XmlPullParser.START_TAG){
+								eventType = xpp.next();
+								nettoPreis = Double.valueOf(xpp.getText());
+							}else if("einkaufspreis" == xpp.getName() && eventType == XmlPullParser.START_TAG){
+								eventType = xpp.next();
+								einkaufspreis = Double.valueOf(xpp.getText());
+							}
+						}
+					}
+				}
+			}
+			
+			
+			
+			
+			if (eventType == XmlPullParser.START_DOCUMENT) {
+				System.out.println("Start document");
+			} else if (eventType == XmlPullParser.END_DOCUMENT) {
+				System.out.println("End document");
+			} else if (eventType == XmlPullParser.START_TAG) {
+				System.out.println("Start tag " + xpp.getName());
+			} else if (eventType == XmlPullParser.END_TAG) {
+				System.out.println("End tag " + xpp.getName());
+			} else if (eventType == XmlPullParser.TEXT) {
+				System.out.println("Text " + xpp.getText());
+			}
+			eventType = xpp.next();
+		}
+		
+		return result;
+	}
+
+}
